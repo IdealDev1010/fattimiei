@@ -1,0 +1,74 @@
+{% comment %}
+    Render contact block for footer.
+
+    Accepts:
+     - block: {Object}
+
+{% endcomment %}
+
+{% capture socialsHtml %}
+    {% render 'social-icons' %}
+{% endcapture %}
+
+{%- liquid
+    assign socialsHtml = socialsHtml | strip
+-%}
+
+<div class="footer-contacts-container">
+    {%- if section.settings.show_logo -%}
+    {%- render 'footer__block-logo' -%}
+    {%- endif -%}
+    <div class="footer-contacts__address reveal-item" {{ block.shopify_attributes }}>
+        {% if block.settings.address != blank %}
+        <div>
+            <div class="address-item _address">
+                <div>
+                {%- if section.settings.use_collapsed_blocks_mobile -%}
+                    <input type="checkbox" id="collapsed--footer-{{ block.id }}" class="visually-hidden">
+                {%- endif -%}
+                    <span class="h5">
+                        {{ 'sections.footer.contacts.address' | t }}
+                        {%- if section.settings.use_collapsed_blocks_mobile -%}
+                            <label for="collapsed--footer-{{ block.id }}">
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                    <use href="#icon-caret" />
+                                </svg>
+                            </label>
+                        {%- endif -%}
+                    </span>
+                    {{- block.settings.address -}}
+
+                    {%- if block.settings.show_email -%}
+                    <div class="address-item email">
+                        <a href ="mailto:{{ settings.contact_email }}" title="{{ 'header_top.contact_email.title' | t }}">
+                            {{- settings.contact_email -}}
+                        </a>
+                    </div>
+                    {%- endif -%}
+                    {%- if block.settings.show_phone -%}
+                    <div class="address-item phone">
+                        <p>{{- settings.contact_phone -}}</p>
+                    </div>
+                    {%- endif -%}
+                </div>
+
+            </div>
+        </div>
+        {% endif %}
+        {% if section.settings.use_collapsed_blocks_mobile %}
+            <div class="wrapper-collapsed-content-media">
+            {%- if section.settings.show_logo -%}
+                {%- render 'footer__block-logo' -%}
+            {%- endif -%}
+        {% endif %}
+
+        {%- if socialsHtml != blank -%}
+        <div class="footer-contacts__social">
+            {{ socialsHtml }}
+        </div>
+        {%- endif -%}
+        {% if section.settings.use_collapsed_blocks_mobile %}
+            </div>
+        {% endif %}
+    </div>
+</div>

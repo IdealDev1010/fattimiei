@@ -1,0 +1,444 @@
+{%- liquid
+    assign padding_bottom = '75%'
+    if section.settings.image != blank
+        capture padding_bottom
+            render 'helper__media-padding-bottom', image: section.settings.image, image_ratio: 'native'
+        endcapture
+    endif
+
+    case section.settings.image_height
+        when 'small'
+            assign padding_bottom = '14rem'
+            assign padding_bottom_md = '26rem'
+        when 'medium'
+            assign padding_bottom = '20rem'
+            assign padding_bottom_md = '34rem'
+        when 'large'
+            assign padding_bottom = '28rem'
+            assign padding_bottom_md = '44rem'
+    endcase
+
+    assign image_sizes = '(max-width: 767px) calc(100vw - .75rem * 2), calc(min(100vw, 1200px) / #m# - .75rem * 2)'
+    case section.settings.image_width
+        when 'small'
+            assign image_sizes = image_sizes | replace_first: '#m#', '4'
+        when 'medium'
+            assign image_sizes = image_sizes | replace_first: '#m#', '2'
+        when 'large'
+            assign image_sizes = image_sizes | replace_first: '#m#', '1.5'
+    endcase
+
+    assign sectionWidth = 'dynamic-page-width'
+    if section.settings.full_width
+        assign sectionWidth = 'full--width'
+    endif
+
+    assign _class = sectionWidth
+    assign _class = _class | append: ' image-' | append: section.settings.image_width
+    assign _class = _class | append: ' layout-' | append: section.settings.layout
+
+    if section.settings.underlayer
+        assign _class = _class | append: ' with-underlayer'
+    endif
+
+    if section.settings.animation_on_reveal
+        assign _class = _class | append: ' reveal-slide-in'
+    endif
+-%}
+
+{% style %}
+    #shopify-section-{{ section.id }} .dynamic-page-width,
+    #shopify-section-{{ section.id }} .full--width {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 4rem;
+    }
+
+    #shopify-section-{{ section.id }} .media {
+      padding-bottom: {{ padding_bottom }};
+    }
+
+    #shopify-section-{{ section.id }} .image-text,
+    #shopify-section-{{ section.id }} .image-media {
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .image-text {
+      padding: 2rem 1rem;
+    }
+
+    #shopify-section-{{ section.id }} .heading + .rte {
+      margin: 0 0 1.5rem;
+    }
+
+    #shopify-section-{{ section.id }} .image-text p {
+      word-break: break-word;
+    }
+
+    #shopify-section-{{ section.id }} .image-text .button._extend {
+      padding: .75rem 2.75rem;
+    }
+
+    @media (min-width: 768px), print {
+      #shopify-section-{{ section.id }} .dynamic-page-width,
+      #shopify-section-{{ section.id }} .full--width {
+        flex-wrap: nowrap;{% if section.settings.layout == 'text_first' %}
+        flex-direction: row-reverse;{% endif %}
+      }
+      #shopify-section-{{ section.id }} .image-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: {{ section.settings.text_position }};
+        text-align: {{ section.settings.text_align }};
+        padding: 3rem;
+      }{% if 'small|large' contains section.settings.image_width %}
+      #shopify-section-{{ section.id }} .image-media {
+        width: {% if section.settings.image_width == 'small'%}50%{% else %}200%{% endif %};
+      }
+      {% endif %}{% if section.settings.image_height != 'adapt' %}
+      #shopify-section-{{ section.id }} .media {
+        padding-bottom: {{ padding_bottom_md }};
+      }
+      {% endif %}
+      #shopify-section-{{ section.id }} .heading:first-child .title {
+        margin: 0 0 1rem;
+      }{% if section.settings.use_zigzag_shape %}
+
+      #shopify-section-{{ section.id }} .image-text {
+        align-self: unset;
+      }
+
+      #shopify-section-{{ section.id }} .layout-image_first .image-media,
+      #shopify-section-{{ section.id }} .layout-text_first .image-text {
+        margin-top: 30px;
+        margin-bottom: -30px;
+      }{% endif %}
+
+      #shopify-section-{{ section.id }} .image-text,
+      #shopify-section-{{ section.id }} .image-media {
+        width: 50%;
+      }{% if section.settings.image_inner_paddings %}
+
+      #shopify-section-{{ section.id }} .image-media {
+        padding: 1.5rem;
+      }{% endif %}
+    }{% if section.settings.underlayer %}
+
+    @media (min-width: 990px) {
+      #shopify-section-{{ section.id }} .with-underlayer {
+        padding: 2rem;
+      }
+    }{% endif %}
+
+    @media (min-width: 990px) {
+      #shopify-section-{{ section.id }} .image-text {
+        padding: 5rem;
+      }{% if section.settings.image_inner_paddings %}
+
+      #shopify-section-{{ section.id }} .image-media {
+        padding: 2.5rem;
+      }{% endif %}
+    }
+{% endstyle %}
+
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="{{ _class }}">
+    <div class="image-media reveal-item">
+        <div class="media">
+            {%- if section.settings.image != blank -%}
+                {% render 'render-image',
+                    image: section.settings.image,
+                    sizes: image_sizes,
+                    widths: '698,966,1176,#iw#'
+                %}
+            {%- else -%}
+                {{ 'collection-6' | placeholder_svg_tag: 'placeholder' }}
+            {%- endif -%}
+        </div>
+    </div>
+    <div
+        class="image-text reveal-item"
+        style="background: {{ section.settings.text_block_background_gradient | default: section.settings.text_block_background }};color: {{ section.settings.text_block_foreground }}"
+    >
+        {% render 'image_with_text', blocks: section.blocks %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.image-with-text.name",
+  "class": "spaced-section section-image-with-text",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.image-with-text.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-banner.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.image_height.label"
+    },
+    {
+      "type": "select",
+      "id": "image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-banner.settings.image_height.options__4.label"
+        }
+      ],
+      "label": "t:sections.image-with-text.settings.image_width.label",
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_inner_paddings",
+      "label": "t:sections.image-with-text.settings.image_inner_paddings.label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:sections.all.alignments.top.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.alignments.center.label"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:sections.all.alignments.bottom.label"
+        }
+      ],
+      "label": "t:sections.image-with-text.settings.text_position.label",
+      "info": "t:sections.image-with-text.settings.text_position.info",
+      "default": "flex-start"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.text_align.option__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.alignments.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.text_align.option__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.text_align.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_zigzag_shape",
+      "label": "t:sections.image-with-text.settings.use_zigzag_shape.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "underlayer",
+      "default": false,
+      "label": "t:sections.image-banner.settings.underlayer.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "animation_on_reveal",
+      "label": "t:sections.all.settings.animation_on_reveal.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.image-with-text.settings.header.content"
+    },
+    {
+      "type": "color",
+      "id": "text_block_background",
+      "label": "t:sections.image-with-text.settings.text_block_background.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "text_block_background_gradient",
+      "label": "t:sections.image-with-text.settings.text_block_background_gradient.label"
+    },
+    {
+      "type": "color",
+      "id": "text_block_foreground",
+      "label": "t:sections.image-with-text.settings.text_block_foreground.label",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Image with text",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "t:sections.multicolumn.settings.heading_size.options.h1"
+            },
+            {
+              "value": "h2",
+              "label": "t:sections.multicolumn.settings.heading_size.options.h2"
+            },
+            {
+              "value": "h3",
+              "label": "t:sections.multicolumn.settings.heading_size.options.h3"
+            }
+          ],
+          "default": "h2",
+          "label": "t:sections.multicolumn.settings.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-with-text.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_background.label",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_color.label",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "action_btn_width",
+          "label": "t:sections.all.settings.action_btn_width.label",
+          "options": [
+            {
+              "value": "extend",
+              "label": "t:sections.all.settings.action_btn_width.options.extend"
+            },
+            {
+              "value": "shrink",
+              "label": "t:sections.all.settings.action_btn_width.options.shrink"
+            }
+          ],
+          "default": "extend"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-with-text.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

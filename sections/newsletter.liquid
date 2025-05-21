@@ -1,0 +1,375 @@
+{{ 'newsletter.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+    # newsletter image
+    assign padding_bottom = '75%'
+    if section.settings.image != blank
+        capture padding_bottom
+            render 'helper__media-padding-bottom', image: section.settings.newsletter_image, image_ratio: 'native'
+        endcapture
+    endif
+
+    case section.settings.image_height
+        when 'small'
+            assign padding_bottom = '14rem'
+            assign padding_bottom_md = '26rem'
+        when 'medium'
+            assign padding_bottom = '20rem'
+            assign padding_bottom_md = '34rem'
+        when 'large'
+            assign padding_bottom = '28rem'
+            assign padding_bottom_md = '44rem'
+    endcase
+    # end newsletter image
+
+    assign emailForm = section.blocks | where: 'type', 'email_form' | first
+    assign buttonStyle = emailForm.settings.button_style_secondary
+    assign block_images = section.blocks | where: 'type', 'image'
+    assign newsletter_height = 0
+    assign newsletter_ratio = 0
+    for block in block_images
+        if block.settings.is_background
+            assign h = block.settings.image.height | default: 236
+            assign r = block.settings.image.aspect_ratio
+            if h > newsletter_height
+                assign newsletter_height = h
+                assign newsletter_ratio = r
+            endif
+        endif
+    endfor
+
+    assign section_class = 'newsletter text-center '
+    assign section_class = section_class | append: section.settings.image_position
+    if section.settings.full_width
+        assign section_class = section_class | append: ' full--width'
+    else
+        assign section_class = section_class | append: ' newsletter--narrow dynamic-page-width'
+    endif
+
+    if section.settings.animation_on_reveal
+        assign section_class = section_class | append: ' reveal-slide-in'
+    endif
+%}
+{% if emailForm.settings.minimal_form %}
+    {% style %}
+        #shopify-section-{{ section.id }} .newsletter-form__field-wrapper button {
+          position: absolute;
+          right: 0.15rem;
+          top: 0.15rem;
+          height: calc(3rem - 5px);
+          min-width: 4rem;
+        }
+    {% endstyle %}
+{% endif %}
+{%- if template == 'password' %}
+    {% style %}
+        #shopify-section-{{ section.id }} {
+          margin: 2rem 0 3rem;
+        }
+        .form-newsletter_container {
+          border-radius: 4px;
+          margin: 0rem auto;
+          width: calc(100% - 1rem);
+          max-width: 30rem;
+        }
+        .countdown-timer > .wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+        .newsletter__wrapper  {
+          padding: 2rem 0;
+        }
+    {% endstyle %}
+{% else %}
+    {% render 'newsletter__styles', newsletter_height: newsletter_height %}
+{% endif -%}
+
+<div class="{{ section_class }}">
+    {% unless template == 'password' %}
+        <div class="image-media reveal-item">
+            <div class="media" style="padding-bottom: {{ padding_bottom }};">
+                {%- if section.settings.newsletter_image != blank -%}
+                    {% render 'render-image',
+                        image: section.settings.newsletter_image,
+                        sizes: '100vw',
+                        widths: '698,966,1176,#iw#'
+                    %}
+                {%- else -%}
+                    {{ 'collection-6' | placeholder_svg_tag: 'placeholder' }}
+                {%- endif -%}
+            </div>
+        </div>
+    {% endunless %}
+    <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} position__{{ section.settings.email_position }}">
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'heading' -%}
+                    <h2 class="title relative reveal-item" {{ block.shopify_attributes }}>
+                        {{ block.settings.heading }}
+                    </h2>
+                    {% if block.settings.subtext != blank %}
+                        <div class="subtext-content">
+                            {{ block.settings.subtext }}
+                        </div>
+                    {% endif %}
+                {%- when 'image' -%}
+                    {% render 'newsletter__block-image', block: block %}
+                {%- when 'icon' -%}
+                    {% render 'newsletter__block-icon', block: block %}
+                {%- when 'paragraph' -%}
+                    <div class="newsletter__subheading mb-4 relative reveal-item" {{ block.shopify_attributes }}>
+                        {{ block.settings.paragraph }}
+                    </div>
+                {%- when 'email_form' -%}
+                    <div class="form-newsletter_container reveal-item" {{ block.shopify_attributes }}>
+                        {% capture form_html %}
+              {% liquid
+                assign form_newsletter_class = 'newsletter-form'
+                if emailForm.settings.minimal_form
+                  assign form_newsletter_class = form_newsletter_class | append: ' minimal-form'
+                endif
+               %}
+                {% render 'form-newsletter-subscribe'
+                  id: 'contact_form'
+                  class: form_newsletter_class
+                  block_order: forloop.index
+                  use_email_min_form: block.settings.minimal_form
+                %}
+              {% endcapture %}
+                        {% unless block.settings.button_style_secondary %}
+                            {% assign form_html = form_html | replace: 'button--secondary', 'button--primary' %}
+                        {% endunless %}
+                        {{ form_html }}
+                    </div>
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "newsletter_image",
+      "label": "t:sections.newsletter.settings.newsletter_image.label",
+      "info": "t:sections.newsletter.settings.newsletter_image.info"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.newsletter.settings.image_position.options.image_first"
+        },
+        {
+          "value": "newsletter_first",
+          "label": "t:sections.newsletter.settings.image_position.options.newsletter_first"
+        },
+        {
+          "value": "image_cover",
+          "label": "t:sections.newsletter.settings.image_position.options.image_cover"
+        }
+      ],
+      "default": "image_cover",
+      "label": "t:sections.newsletter.settings.image_position.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-banner.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.image_height.label"
+    },
+    {
+      "type": "select",
+      "id": "email_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.newsletter.settings.email_position.options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.newsletter.settings.email_position.options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.newsletter.settings.email_position.options.right"
+        }
+      ],
+      "default": "right",
+      "label": "t:sections.newsletter.settings.email_position.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "animation_on_reveal",
+      "label": "t:sections.all.settings.animation_on_reveal.label",
+      "default": false
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.paragraph.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.newsletter.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Subscribe to our emails",
+          "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "label": "t:sections.newsletter.blocks.heading.settings.subtext.label",
+          "default": "<p>Sorry for the inconvenience but we're performing some maintenance at the moment. If you need to you can always contact us, otherways we'll be back online shortly!</p>"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.newsletter.blocks.maintenance_image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.newsletter.blocks.maintenance_image.settings.title"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_background",
+          "label": "t:sections.newsletter.blocks.maintenance_image.settings.is_background.label"
+        }
+      ]
+    },
+    {
+      "type": "icon",
+      "name": "t:sections.newsletter.blocks.icon.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:sections.newsletter.blocks.icon.settings.icon.label",
+          "options": [
+            { "value": "maintenance", "label": "Maintenance"},
+            { "value": "bell", "label": "Bell"}
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_picker",
+          "label": "t:sections.newsletter.blocks.icon.settings.icon_picker.label"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "t:sections.newsletter.blocks.paragraph.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+          "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        }
+      ]
+    },
+    {
+      "type": "email_form",
+      "name": "t:sections.newsletter.blocks.email_form.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.all.button_style_secondary.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "minimal_form",
+          "label": "t:sections.newsletter.blocks.email_form.settings.minimal_form",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.name",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "subtext": ""
+          }
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

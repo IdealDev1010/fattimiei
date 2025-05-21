@@ -1,0 +1,325 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "breadcrumbs",
+    "main",
+    "product-tabs",
+    "products-recommendations",
+    "products-complementary",
+    "border_separator_1",
+    "recent_posts",
+    "border_separator_2",
+    "icons_bar"
+  ],
+  "sections": {
+    "border_separator_1": {
+      "settings": {
+        "border_color": "",
+        "border_height": 1
+      },
+      "type": "border-separator"
+    },
+    "border_separator_2": {
+      "settings": {
+        "border_color": "",
+        "border_height": 1
+      },
+      "type": "border-separator"
+    },
+    "breadcrumbs": {
+      "settings": {
+        "border_bottom": false,
+        "border_top": false,
+        "use_background_transparent": false
+      },
+      "type": "breadcrumbs"
+    },
+    "icons_bar": {
+      "block_order": [
+        "icon-bar-1",
+        "icon-bar-2",
+        "icon-bar-3"
+      ],
+      "blocks": {
+        "icon-bar-1": {
+          "settings": {
+            "icon": "divine-shipping",
+            "text": "<p><strong>Free Delivery</strong></p>",
+            "text_underneath_icon": "<p>Delivery is free above 100$ on every order</p>"
+          },
+          "type": "icon"
+        },
+        "icon-bar-2": {
+          "settings": {
+            "icon": "divine-returns",
+            "text": "<p><strong>30 days for returns</strong></p>",
+            "text_underneath_icon": "<p>Returns is free above a certain threshold. Discover more in our<a href=\"/pages/faqs\" title=\"FAQs\"> FAQ</a></p>"
+          },
+          "type": "icon"
+        },
+        "icon-bar-3": {
+          "settings": {
+            "icon": "divine-lock",
+            "text": "<p><strong>Secure Payment</strong></p>",
+            "text_underneath_icon": "<p>Take advantage of a secure payments. Discover more in our <a href=\"/pages/faqs\" title=\"FAQs\">FAQ</a></p>"
+          },
+          "type": "icon"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": true,
+        "border_bottom": false,
+        "border_top": false,
+        "color_scheme": "background-1",
+        "icons_width": 25,
+        "separator": false,
+        "shadow": false,
+        "text_position": "theme_appearance",
+        "visibility": "all"
+      },
+      "type": "icons-bar"
+    },
+    "main": {
+      "block_order": [
+        "title",
+        "stock_status",
+        "gallery",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pickup",
+        "collapsible_customer_service",
+        "collapsible_return_policy",
+        "recommendations_cQPtMh",
+        "share"
+      ],
+      "blocks": {
+        "buy_buttons": {
+          "settings": {
+            "gift_card_show_recipient_form": true,
+            "show_dynamic_checkout": true
+          },
+          "type": "buy_buttons"
+        },
+        "collapsible_customer_service": {
+          "settings": {
+            "content": "<p>Our dedicated customer service team is here to assist you with any questions or concerns. Whether you need help with your order, returns, or product information, we're just a call or email away. Contact us for prompt and friendly support!</p>",
+            "heading": "Customer Service",
+            "icon": "chat_bubble",
+            "page": "contact"
+          },
+          "type": "collapsible_tab"
+        },
+        "collapsible_return_policy": {
+          "settings": {
+            "content": "<p>We offer a stress-free return policy with a generous 30-day return window. Enjoy free returns on orders over $50, giving you peace of mind with every purchase. Whether you're trying new styles or deciding on a fit, we prioritize your satisfaction, making sure your shopping experience is as flexible and easy as possible.</p>",
+            "heading": "Return Policy",
+            "icon": "return",
+            "page": ""
+          },
+          "type": "collapsible_tab"
+        },
+        "description": {
+          "disabled": true,
+          "settings": {
+            "initial_lines": 3,
+            "is_collapsed": false
+          },
+          "type": "description"
+        },
+        "gallery": {
+          "settings": {
+            "badge_size": "md",
+            "gallery_thumbs_mode": "grid_theme",
+            "is_thumbnail_mobile_bullet": true,
+            "placeholder_name": "product-1",
+            "show_badges": true,
+            "show_navigation": false,
+            "thumbnail_size": 320,
+            "transition_effect": "fade_in",
+            "use_gallery_placeholder": false
+          },
+          "type": "gallery"
+        },
+        "pickup": {
+          "settings": {},
+          "type": "pickup"
+        },
+        "price": {
+          "settings": {
+            "show_tax_message": false
+          },
+          "type": "price"
+        },
+        "quantity_selector": {
+          "settings": {},
+          "type": "quantity_selector"
+        },
+        "recommendations_cQPtMh": {
+          "settings": {
+            "heading": "Pair well with",
+            "heading_icon": "star",
+            "intent": "related",
+            "is_collapsible_tab": true,
+            "products_to_show": 6
+          },
+          "type": "recommendations"
+        },
+        "share": {
+          "settings": {
+            "show_facebook": true,
+            "show_pinterest": true,
+            "show_twitter": true
+          },
+          "type": "share"
+        },
+        "stock_status": {
+          "settings": {
+            "show_stock_status": true,
+            "stock_left_threshold": 9
+          },
+          "type": "stock_status"
+        },
+        "title": {
+          "settings": {
+            "show_price": true,
+            "show_rating_judgeme": true,
+            "show_sku": true,
+            "text_after": "",
+            "text_before": "{{ product.vendor }}"
+          },
+          "type": "title"
+        },
+        "variant_picker": {
+          "settings": {
+            "mark_unavailable_variants": true,
+            "picker_type": "button",
+            "show_swatch_colors": true
+          },
+          "type": "variant_picker"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": true,
+        "enable_quick_add": false,
+        "enable_sticky_info": true,
+        "product_info_position": false
+      },
+      "type": "main-product"
+    },
+    "product-tabs": {
+      "block_order": [
+        "description",
+        "reviews",
+        "faq",
+        "similar"
+      ],
+      "blocks": {
+        "description": {
+          "settings": {
+            "heading": "Description"
+          },
+          "type": "description"
+        },
+        "faq": {
+          "settings": {
+            "default_faqs": "What level of performance can I expect from 4K Color Drive?:This tv comes equipped with a 4k color drive, which allows the tv to accurately reproduce a wider spectrum of colors. you’ll experience an exceptionally vibrant, pristine image that makes each scene more lifelike.",
+            "heading": "Frequently Asked Questions",
+            "link_to_faq_page": "shopify://pages/faqs"
+          },
+          "type": "faq"
+        },
+        "reviews": {
+          "settings": {
+            "enable_theme_appearance": true,
+            "heading": "Reviews"
+          },
+          "type": "reviews"
+        },
+        "similar": {
+          "settings": {
+            "badge_size": "sm",
+            "heading": "Similar Products",
+            "image_ratio": "settings|product_card_image_ratio",
+            "is_random": true,
+            "products_per_page": 4,
+            "show_to_cart_button": true,
+            "source": [
+              "abstract-art-design-womens-all-over-print-mid-rise-bike-shorts",
+              "abstract-art-design-womens-satin-pajama-shorts",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-ruffle-shorts"
+            ]
+          },
+          "type": "similar"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": true,
+        "collapsed_tabs_bg": "",
+        "collapsed_tabs_bg_gradient": "linear-gradient(270deg, rgba(160, 232, 254, 1), rgba(252, 224, 252, 1) 100%)",
+        "collapsed_tabs_color": "#000000",
+        "section_tabs_bg": "#F6F5F4",
+        "section_tabs_bg_gradient": "",
+        "tabs_layout": "collapsed"
+      },
+      "type": "product-tabs"
+    },
+    "products-complementary": {
+      "settings": {
+        "animation_on_reveal": true,
+        "badge_size": "md",
+        "heading_size": "h2",
+        "image_ratio": "settings|product_card_image_ratio",
+        "products_appearance": "slider",
+        "products_background_color": "#ffffff",
+        "products_per_row": 4,
+        "products_to_show": 8,
+        "show_slider_buttons": true,
+        "show_to_cart_button": true,
+        "title": "Complementary products"
+      },
+      "type": "product-complementary"
+    },
+    "products-recommendations": {
+      "settings": {
+        "animation_on_reveal": true,
+        "badge_size": "md",
+        "heading_size": "h2",
+        "image_ratio": "settings|product_card_image_ratio",
+        "products_appearance": "slider",
+        "products_background_color": "#ffffff",
+        "products_per_row": 4,
+        "products_to_show": 8,
+        "show_slider_buttons": true,
+        "show_to_cart_button": true,
+        "title": "You may also like"
+      },
+      "type": "product-recommendations"
+    },
+    "recent_posts": {
+      "settings": {
+        "animation_on_reveal": true,
+        "blog": "news",
+        "excerpt_limit": 0,
+        "heading": "Recent stories",
+        "post_limit": 3,
+        "show_comments": false,
+        "show_date": true,
+        "show_image": true,
+        "show_link": false,
+        "tags_limit": 3
+      },
+      "type": "featured-blog"
+    }
+  }
+}

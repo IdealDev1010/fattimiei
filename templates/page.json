@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "border_top": false,
+        "border_bottom": false,
+        "use_background_transparent": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "layout_max_width": 1200,
+        "animation_on_reveal": true
+      }
+    },
+    "border_separator": {
+      "type": "border-separator",
+      "settings": {
+        "border_height": 1,
+        "border_color": ""
+      }
+    },
+    "icons_bar": {
+      "type": "icons-bar",
+      "settings": {
+        "color_scheme": "background-1",
+        "visibility": "all",
+        "icons_width": 25,
+        "text_position": "theme_appearance",
+        "border_top": false,
+        "border_bottom": false,
+        "shadow": false,
+        "separator": false,
+        "animation_on_reveal": true
+      }
+    },
+    "faqs_page_zjBJUC": {
+      "type": "faqs-page",
+      "blocks": {
+        "faq_accordion_GADeEe": {
+          "type": "faq_accordion",
+          "settings": {
+            "heading": "¿Dónde se encuentra ubicada FATTIMIEI?",
+            "custom_liquid": "Nuestra sede está ubicada en [Calle Río Tajo, 4, 29660 Marbella, Málaga, Spain]. Sin embargo, ofrecemos envíos a nivel nacional e internacional. Para obtener información sobre envíos a tu área específica, no dudes en contactarnos."
+          }
+        },
+        "faq_accordion_UtHJHf": {
+          "type": "faq_accordion",
+          "settings": {
+            "heading": "General Question",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_accordion_GADeEe",
+        "faq_accordion_UtHJHf"
+      ],
+      "name": "t:sections.faqs-page.name",
+      "settings": {
+        "show_search_field": false,
+        "cover_background": "#F5F5F5",
+        "cover_background_gradient": "",
+        "animation_on_reveal": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "border_separator",
+    "icons_bar",
+    "faqs_page_zjBJUC"
+  ]
+}

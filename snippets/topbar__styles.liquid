@@ -1,0 +1,66 @@
+{%- comment -%}
+    Render styles for header top bar section.
+
+    Accepts:
+    - section_id: {String}
+{%- endcomment -%}
+
+{% style %}
+    {{ section_id }} {
+        display: block;
+        background: {{ section.settings.color_background }};
+        color: {{ section.settings.color_text }};
+        font-size: .8125rem;
+        font-weight: 500;
+        position: relative;{% if section.settings.add_border_bottom %}
+        box-shadow: inset 0px -1px 0px 0px rgba({{ section.settings.color_text.red }}, {{ section.settings.color_text.green }}, {{ section.settings.color_text.blue }}, .3);{% endif %}
+    }
+
+    #header-top-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+        padding-top: .1875rem;
+        padding-bottom: .1875rem;
+        max-width: {{ section.settings.custom_layout_width }}px;
+        margin: 0 auto;
+    }
+
+    #header-top-inner .contacts {
+        white-space: nowrap;
+    }
+
+    #header-top-inner .contacts a + a {
+        padding-left: 1rem;
+    }
+    {% if section.settings.show_social_icons %}
+    #header-top-inner .social_icons--wrapper {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        margin-right: .75rem;
+    }
+
+    #header-top-inner .social_icons--wrapper a svg {
+        --social-icon-width: 20px;
+        fill: var(--color-button-text);
+        width: var(--social-icon-width);
+        height: var(--social-icon-width);
+    }
+    {% endif %}
+    @media all and (min-width: 640px) {
+        #header-top-inner {
+            flex-wrap: nowrap;
+            gap: 2rem;
+            justify-content: space-between;
+            padding: 0.25rem 0.75rem;
+        }
+
+        #header-top-inner.full--width {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+{% endstyle %}

@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer_top": {
+      "type": "footer",
+      "blocks": {
+        "footer-contacts": {
+          "type": "footer-contacts",
+          "settings": {
+            "address": "",
+            "show_email": false,
+            "show_phone": false
+          }
+        },
+        "about-us": {
+          "type": "aboutus",
+          "settings": {
+            "title": "About us",
+            "subtext": "<p>At FATTIMIEI, Each piece is a work of art, meticulously designed to ensure you feel special and unique every time you wear it. We strive to push the boundaries of conventional fashion, merging global trends with personal touches that make our garments truly exceptional.</p>"
+          }
+        },
+        "menu-2": {
+          "type": "menu",
+          "settings": {
+            "title": "Collections",
+            "menu": "recopilaci-n"
+          }
+        },
+        "menu-3": {
+          "type": "menu",
+          "settings": {
+            "title": "Policies",
+            "menu": "footer"
+          }
+        },
+        "menu-4": {
+          "type": "menu",
+          "settings": {
+            "title": "Top Picks",
+            "menu": "topic-picks"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Sign up & save 15%",
+            "subtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-contacts",
+        "about-us",
+        "menu-2",
+        "menu-3",
+        "menu-4",
+        "newsletter"
+      ],
+      "settings": {
+        "full_width": true,
+        "custom_layout_width": 1440,
+        "show_logo": true,
+        "image": "shopify://shop_images/Sports_And_Surf_0b97ca60-ce06-499c-9168-c2aa7c88752c.png",
+        "logo_width": 180,
+        "social_icons_width": 24,
+        "use_collapsed_blocks_mobile": false,
+        "use_design_elements": true,
+        "newsletter_in_row": false,
+        "animation_on_reveal": false
+      }
+    },
+    "footer_bottom": {
+      "type": "footer-bottom",
+      "blocks": {
+        "copyright": {
+          "type": "copyright",
+          "settings": {
+            "text": "Copyright @2025. Designed by Bondliden"
+          }
+        },
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "title": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "copyright",
+        "menu"
+      ],
+      "settings": {
+        "full_width": false,
+        "custom_layout_width": 1440,
+        "payment_enable": true,
+        "payment_icons_saturate": 100,
+        "custom_payment_icon": "",
+        "control_icon_width": 60,
+        "follow_on_shop": true,
+        "show_policy": false
+      }
+    }
+  },
+  "order": [
+    "footer_top",
+    "footer_bottom"
+  ]
+}

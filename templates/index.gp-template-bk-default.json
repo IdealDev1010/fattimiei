@@ -1,0 +1,1181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "image_slider",
+    "border_separator_2",
+    "collection_list_mKHeAG",
+    "favourite_products",
+    "collage_qMzQVQ",
+    "rich_text_y6LRVd",
+    "banner-image",
+    "ideas_slider",
+    "scrolling_text",
+    "testimonials_n4JJtc",
+    "home-banners",
+    "about_store",
+    "recent_posts",
+    "explore_KfhMMr",
+    "collage_cTRHeE",
+    "featured_collection_3mknHF",
+    "newsletter",
+    "rich_text_aDMmcd",
+    "featured_product_Yrn73R",
+    "highlight-banner-products",
+    "border_separator_3",
+    "comparison-products-slider",
+    "video-banner",
+    "home-banners-2"
+  ],
+  "sections": {
+    "about_store": {
+      "block_order": [
+        "title",
+        "content",
+        "action"
+      ],
+      "blocks": {
+        "action": {
+          "settings": {
+            "action_btn_width": "extend",
+            "button_background": "#ffffff",
+            "button_color": "#000000",
+            "button_label": "About us",
+            "button_link": "shopify://pages/quienes-somos"
+          },
+          "type": "button"
+        },
+        "content": {
+          "settings": {
+            "text": "<p>Our team of designers and athletes work tirelessly to create apparel that blends style, comfort, and functionality. From the stitching to the fabric, every detail is carefully considered to ensure you get the best experience possible.</p><p>Whether you're catching waves or lifting weights, our gear is designed to keep up with you.</p>"
+          },
+          "type": "text"
+        },
+        "title": {
+          "settings": {
+            "heading": "Our Commitment to Quality",
+            "heading_size": "h3"
+          },
+          "type": "heading"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": true,
+        "full_width": false,
+        "image": "shopify://shop_images/Photo_Collage_Poster_2_b3850aef-1c41-4cb2-bc7e-409a2c0778a0.png",
+        "image_height": "small",
+        "image_inner_paddings": true,
+        "image_width": "large",
+        "layout": "image_first",
+        "text_align": "left",
+        "text_block_background": "#242833",
+        "text_block_background_gradient": "",
+        "text_block_foreground": "#ffffff",
+        "text_position": "flex-start",
+        "underlayer": false,
+        "use_zigzag_shape": false
+      },
+      "type": "image-with-text"
+    },
+    "banner-image": {
+      "block_order": [
+        "title",
+        "text",
+        "actions"
+      ],
+      "blocks": {
+        "actions": {
+          "settings": {
+            "action_btn_width": "extend",
+            "button_label_1": "Discover",
+            "button_label_2": "",
+            "button_link_1": "shopify://collections/all",
+            "button_link_2": "",
+            "button_style_secondary_1": false,
+            "button_style_secondary_2": false
+          },
+          "type": "buttons"
+        },
+        "text": {
+          "settings": {
+            "text": "View our Lookbook",
+            "text_color": "#ffffff",
+            "text_font_size": 2
+          },
+          "type": "text"
+        },
+        "title": {
+          "settings": {
+            "heading": "Stylish flair",
+            "heading_color": "#ffffff",
+            "level": "h2"
+          },
+          "type": "heading"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": true,
+        "bg_color_1": "#ffffff",
+        "bg_color_2": "#ffffff",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "hide_banner_on_mobile": false,
+        "image": "shopify://shop_images/background.jpg",
+        "image_height": "large",
+        "image_parallax_speed": 0,
+        "image_position": "center",
+        "is_preload": false,
+        "source": [],
+        "stack_images_on_mobile": true,
+        "text_box_position": "center",
+        "underlayer": false,
+        "visibility": "always"
+      },
+      "type": "image-banner"
+    },
+    "border_separator_2": {
+      "settings": {
+        "border_color": "",
+        "border_height": 1
+      },
+      "type": "border-separator"
+    },
+    "border_separator_3": {
+      "settings": {
+        "border_color": "",
+        "border_height": 1
+      },
+      "type": "border-separator"
+    },
+    "collage_cTRHeE": {
+      "block_order": [
+        "video_8rQEBj",
+        "product_QmGGYH",
+        "collection_XEWeUa"
+      ],
+      "blocks": {
+        "collection_XEWeUa": {
+          "settings": {
+            "collection": "ruffle-shorts",
+            "color_scheme": "background-1"
+          },
+          "type": "collection"
+        },
+        "product_QmGGYH": {
+          "settings": {
+            "color_scheme": "background-1",
+            "product": "surf-city-womens-all-over-print-ruffle-shorts",
+            "secondary_background": false
+          },
+          "type": "product"
+        },
+        "video_8rQEBj": {
+          "settings": {
+            "cover_image": "shopify://shop_images/r6_c27189f5-f0e4-417e-ba36-b0e85785845a.png",
+            "description": "Describe the video for customers using screen readers",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+          },
+          "type": "video"
+        }
+      },
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "desktop_layout": "left",
+        "heading": "Ruffle Up! Chic Shorts for Every Mood",
+        "mobile_layout": "collage"
+      },
+      "type": "collage"
+    },
+    "collage_qMzQVQ": {
+      "block_order": [
+        "collection_ixfNYP"
+      ],
+      "blocks": {
+        "collection_ixfNYP": {
+          "settings": {
+            "collection": "high-rise-wide-leg-pants",
+            "color_scheme": "accent-2"
+          },
+          "type": "collection"
+        }
+      },
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "desktop_layout": "left",
+        "heading": "Unique",
+        "mobile_layout": "column"
+      },
+      "type": "collage"
+    },
+    "collection_list_mKHeAG": {
+      "disabled": true,
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "show_view_all": true,
+        "title": "Collections"
+      },
+      "type": "collection-list"
+    },
+    "comparison-products-slider": {
+      "disabled": true,
+      "settings": {
+        "animation_on_reveal": true,
+        "bg_color_1": "#f6f5f4",
+        "description_bg_color": "#ffffff",
+        "heading": "Get the right color for you",
+        "heading_size": "h2",
+        "image_height": "medium",
+        "is_preload": false,
+        "product_1": "",
+        "product_2": "",
+        "use_original_product_image": true
+      },
+      "type": "comparison-slider"
+    },
+    "explore_KfhMMr": {
+      "block_order": [
+        "product_list_VhyQ3A",
+        "product_list_7eDaEb",
+        "product_list_gpEkYK",
+        "product_list_nxCrqG"
+      ],
+      "blocks": {
+        "product_list_7eDaEb": {
+          "settings": {
+            "badge_size": "sm",
+            "heading": "Special offers",
+            "image_ratio": "settings|product_card_image_ratio",
+            "mode": "grid",
+            "product_list": [
+              "abstract-coral-and-blue-womens-all-over-print-lounge-cropped-tee",
+              "abstract-coral-and-blue-womens-all-over-print-seamless-sports-bra",
+              "abstract-italian-lemon-print-womens-all-over-print-high-rise-wide-leg-pants",
+              "abstract-italian-lemon-print-womens-all-over-print-mid-rise-bike-shorts",
+              "abstract-italian-lemon-print-womens-all-over-print-mid-rise-capri",
+              "abstract-italian-lemon-print-womens-all-over-print-ruffle-shorts",
+              "abstract-italian-lemon-print-womens-all-over-print-seamless-sports-bra",
+              "abstract-italian-lemon-print-womens-all-over-print-track-pants",
+              "abstract-italian-lemon-print-womens-all-over-print-yoga-pants",
+              "abstract-italian-lemon-print-womens-satin-pajama-pants",
+              "abstract-italian-lemon-print-womens-satin-pajama-shorts",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-mid-rise-bike-shorts",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-mid-rise-capri",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-ruffle-shorts",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-yoga-pants"
+            ],
+            "products_per_row": 4,
+            "products_to_show": 8,
+            "show_description": false,
+            "show_random": true,
+            "show_slider_buttons": true,
+            "show_to_cart_button": true,
+            "show_view_all_link": ""
+          },
+          "type": "product_list"
+        },
+        "product_list_VhyQ3A": {
+          "settings": {
+            "badge_size": "sm",
+            "heading": "New products",
+            "image_ratio": "settings|product_card_image_ratio",
+            "mode": "grid",
+            "product_list": [
+              "22-womens-all-over-print-cropped-windbreaker",
+              "22-womens-all-over-print-track-pants",
+              "80s-beach-vibes-womens-all-over-print-seamless-sports-bra",
+              "80s-surf-printed-shirt",
+              "90s-surf-printed-shirt",
+              "abstract-art-design-womens-all-over-print-high-rise-wide-leg-pants",
+              "abstract-art-design-womens-all-over-print-mid-rise-bike-shorts",
+              "abstract-art-design-womens-all-over-print-mid-rise-capri",
+              "abstract-art-design-womens-all-over-print-ruffle-shorts",
+              "abstract-art-design-womens-all-over-print-yoga-pants",
+              "abstract-art-design-womens-all-over-print-seamless-sports-bra",
+              "abstract-art-design-womens-satin-pajama-pants",
+              "abstract-art-design-womens-satin-pajama-shorts"
+            ],
+            "products_per_row": 4,
+            "products_to_show": 8,
+            "show_description": false,
+            "show_random": true,
+            "show_slider_buttons": true,
+            "show_to_cart_button": true,
+            "show_view_all_link": ""
+          },
+          "type": "product_list"
+        },
+        "product_list_gpEkYK": {
+          "settings": {
+            "badge_size": "sm",
+            "heading": "Bestsellers",
+            "image_ratio": "settings|product_card_image_ratio",
+            "mode": "grid",
+            "product_list": [
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-satin-pajama-pants",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-satin-pajama-shorts",
+              "alchemy-magic-empower-your-inner-strength-womens-all-over-print-seamless-sports-bra-1",
+              "all-over-print-recycled-swim-trunks",
+              "all-over-print-recycled-swim-trunks-1",
+              "all-over-print-recycled-swim-trunks-2",
+              "all-over-print-recycled-swim-trunks-3",
+              "all-over-print-recycled-swim-trunks-5",
+              "all-over-print-recycled-swim-trunks-4",
+              "all-over-print-recycled-swim-trunks-6",
+              "all-over-print-recycled-swim-trunks-7",
+              "all-over-print-recycled-swim-trunks-8",
+              "all-over-print-recycled-swim-trunks-9",
+              "all-over-print-recycled-swim-trunks-10",
+              "all-over-print-recycled-swim-trunks-11"
+            ],
+            "products_per_row": 4,
+            "products_to_show": 8,
+            "show_description": false,
+            "show_random": true,
+            "show_slider_buttons": true,
+            "show_to_cart_button": true,
+            "show_view_all_link": ""
+          },
+          "type": "product_list"
+        },
+        "product_list_nxCrqG": {
+          "settings": {
+            "badge_size": "sm",
+            "heading": "Popular",
+            "image_ratio": "settings|product_card_image_ratio",
+            "mode": "grid",
+            "product_list": [
+              "beanie-2",
+              "bold-classic-oversized-womens-all-over-print-cropped-windbreaker",
+              "bold-classic-oversized-surf-womens-all-over-print-cropped-windbreaker",
+              "bold-classic-oversized-surf-womens-all-over-print-high-rise-wide-leg-pants",
+              "bold-classic-oversized-surf-womens-all-over-print-mid-rise-bike-shorts",
+              "bold-classic-oversized-surf-womens-all-over-print-ruffle-shorts-1",
+              "bold-classic-oversized-surf-womens-all-over-print-mid-rise-capri",
+              "bold-classic-oversized-surf-womens-all-over-print-seamless-sports-bra",
+              "bold-classic-oversized-surf-womens-all-over-print-track-pants",
+              "bold-classic-oversized-surf-womens-all-over-print-yoga-pants",
+              "bold-classic-oversized-surf-womens-satin-pajama-pants",
+              "bold-classic-oversized-surf-womens-satin-pajama-shorts",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-bomber-jacket",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-high-rise-wide-leg-pants",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-lounge-cropped-tee",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-mid-rise-bike-shorts",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-mid-rise-capri",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-ruffle-shorts",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-seamless-sports-bra",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-track-pants",
+              "bright-graphic-hawaiin-print-aqua-background-womens-all-over-print-yoga-pants",
+              "bright-graphic-hawaiin-print-aqua-background-womens-satin-pajama-pants",
+              "bright-graphic-hawaiin-print-aqua-background-womens-satin-pajama-shorts",
+              "butterfly-floral-print-womens-all-over-print-high-rise-wide-leg-pants"
+            ],
+            "products_per_row": 4,
+            "products_to_show": 8,
+            "show_description": false,
+            "show_random": true,
+            "show_slider_buttons": true,
+            "show_to_cart_button": true,
+            "show_view_all_link": ""
+          },
+          "type": "product_list"
+        }
+      },
+      "disabled": true,
+      "name": "t:sections.explore.presets.name",
+      "settings": {
+        "border_top": false,
+        "cover_background": "#002d57",
+        "cover_background_gradient": "linear-gradient(90deg, rgba(186, 207, 245, 1), rgba(152, 172, 211, 1) 9.09%, rgba(119, 139, 178, 1) 18.18%, rgba(88, 107, 146, 1) 27.27%, rgba(57, 76, 115, 1) 36.36%, rgba(60, 68, 110, 1) 45.45%, rgba(63, 60, 104, 1) 54.55%, rgba(67, 51, 97, 1) 63.64%, rgba(103, 60, 107, 1) 72.73%, rgba(137, 70, 112, 1) 81.82%, rgba(168, 83, 113, 1) 90.91%, rgba(195, 99, 111, 1) 100%)",
+        "heading": "Explore our store"
+      },
+      "type": "explore"
+    },
+    "favourite_products": {
+      "settings": {
+        "animation_on_reveal": true,
+        "badge_size": "md",
+        "collection": "best-sellers",
+        "heading_size": "h2",
+        "image_ratio": "settings|product_card_image_ratio",
+        "products_appearance": "slider",
+        "products_per_row": 4,
+        "products_to_show": 10,
+        "show_random": true,
+        "show_to_cart_button": true,
+        "title": "Trending Favorites"
+      },
+      "type": "featured-collection"
+    },
+    "featured_collection_3mknHF": {
+      "name": "t:sections.featured-collection.presets.featured-collection.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "badge_size": "sm",
+        "collection": "new-arrivals",
+        "heading_size": "h2",
+        "image_ratio": "settings|product_card_image_ratio",
+        "products_appearance": "mixed",
+        "products_per_row": 4,
+        "products_to_show": 8,
+        "show_random": false,
+        "show_to_cart_button": true,
+        "title": "New Arrivals"
+      },
+      "type": "featured-collection"
+    },
+    "featured_product_Yrn73R": {
+      "block_order": [
+        "title_FUc3nM",
+        "stock_status_LMxAxY",
+        "gallery_XJmPFL",
+        "price_3UAtyL",
+        "variant_picker_KFztpC",
+        "quantity_selector_7qfmGU",
+        "buy_buttons_mWeHhf"
+      ],
+      "blocks": {
+        "buy_buttons_mWeHhf": {
+          "settings": {
+            "gift_card_show_recipient_form": true,
+            "show_dynamic_checkout": true
+          },
+          "type": "buy_buttons"
+        },
+        "gallery_XJmPFL": {
+          "settings": {
+            "badge_size": "md",
+            "gallery_thumbs_mode": "grid_theme",
+            "is_thumbnail_mobile_bullet": true,
+            "placeholder_name": "product-1",
+            "show_badges": true,
+            "show_navigation": false,
+            "thumbnail_size": 320,
+            "transition_effect": "fade_in",
+            "use_gallery_placeholder": false
+          },
+          "type": "gallery"
+        },
+        "price_3UAtyL": {
+          "settings": {
+            "show_tax_message": false
+          },
+          "type": "price"
+        },
+        "quantity_selector_7qfmGU": {
+          "settings": {},
+          "type": "quantity_selector"
+        },
+        "stock_status_LMxAxY": {
+          "settings": {
+            "show_stock_status": true,
+            "stock_left_threshold": 9
+          },
+          "type": "stock_status"
+        },
+        "title_FUc3nM": {
+          "settings": {
+            "show_price": true,
+            "show_rating_judgeme": true,
+            "show_sku": false,
+            "text_after": "",
+            "text_before": ""
+          },
+          "type": "title"
+        },
+        "variant_picker_KFztpC": {
+          "settings": {
+            "mark_unavailable_variants": true,
+            "picker_type": "button",
+            "show_swatch_colors": true
+          },
+          "type": "variant_picker"
+        }
+      },
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "color_scheme": "background-1",
+        "heading": "Featured product",
+        "heading_size": "h2",
+        "product": "",
+        "show_thumbnails": false,
+        "use_random_product": true
+      },
+      "type": "featured-product"
+    },
+    "highlight-banner-products": {
+      "block_order": [
+        "title",
+        "spot-1",
+        "spot-2"
+      ],
+      "blocks": {
+        "spot-1": {
+          "settings": {
+            "hotspot_position_left": 50,
+            "hotspot_position_top": 30
+          },
+          "type": "hotspot"
+        },
+        "spot-2": {
+          "settings": {
+            "hotspot_position_left": 80,
+            "hotspot_position_top": 60
+          },
+          "type": "hotspot"
+        },
+        "title": {
+          "settings": {
+            "heading": "Announce featured products",
+            "heading_color": "#ffffff",
+            "level": "h2"
+          },
+          "type": "heading"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "animation_on_reveal": true,
+        "bg_color_1": "#5fb1d9",
+        "bg_color_2": "#f0f0f0",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "hide_banner_on_mobile": true,
+        "image_height": "large",
+        "image_parallax_speed": 0,
+        "image_position": "center",
+        "is_preload": false,
+        "source": [],
+        "stack_images_on_mobile": false,
+        "text_box_position": "justify-start",
+        "underlayer": false,
+        "visibility": "always"
+      },
+      "type": "image-banner"
+    },
+    "home-banners": {
+      "block_order": [
+        "col-1",
+        "col-2"
+      ],
+      "blocks": {
+        "col-1": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#ffffff",
+            "color_text": "#ffffff",
+            "color_title": "#ffffff",
+            "content_position": "bottom",
+            "cover_background": "",
+            "image": "shopify://shop_images/20250110005631-1efceedb-b08d-6b58-b673-de7f441d0e08_79d1ae03-ff7c-4d08-8727-0a1f36f8d3fa.png",
+            "link": "https://www.fattimiei.com/collections/hombres",
+            "link_appearance": "button",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "Explore our standout pieces",
+            "text": "",
+            "title": "Styled for Life"
+          },
+          "type": "column"
+        },
+        "col-2": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#ffffff",
+            "color_text": "#ffffff",
+            "color_title": "#ffffff",
+            "content_position": "bottom",
+            "cover_background": "",
+            "image": "shopify://shop_images/20250110025503-1efcefe4-a0a5-6b78-8c25-1adc1b502286_3b0c2baf-de75-413a-abd9-974ddc5c09b5.png",
+            "link": "https://www.fattimiei.com/collections/mujer",
+            "link_appearance": "button",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "Mix, match, and make it yours",
+            "text": "",
+            "title": "Your Style, Your Rules"
+          },
+          "type": "column"
+        }
+      },
+      "settings": {
+        "action_btn_width": "extend",
+        "animation_on_reveal": true,
+        "button_label": "",
+        "button_link": "",
+        "column_alignment": "left",
+        "column_direction": "cover",
+        "columns": 2,
+        "content_animation": false,
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "image_width": "w-full",
+        "sub_title": "",
+        "swipe_on_mobile": true,
+        "title": ""
+      },
+      "type": "multicolumn"
+    },
+    "home-banners-2": {
+      "block_order": [
+        "col-1",
+        "col-2",
+        "col-3",
+        "col-4"
+      ],
+      "blocks": {
+        "col-1": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#000000",
+            "color_text": "#000000",
+            "color_title": "#000000",
+            "content_position": "center",
+            "cover_background": "rgba(0,0,0,0)",
+            "link": "",
+            "link_appearance": "link",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "",
+            "text": "",
+            "title": ""
+          },
+          "type": "column"
+        },
+        "col-2": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#000000",
+            "color_text": "#000000",
+            "color_title": "#000000",
+            "content_position": "center",
+            "cover_background": "rgba(0,0,0,0)",
+            "link": "",
+            "link_appearance": "link",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "",
+            "text": "",
+            "title": ""
+          },
+          "type": "column"
+        },
+        "col-3": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#000000",
+            "color_text": "#000000",
+            "color_title": "#000000",
+            "content_position": "center",
+            "cover_background": "rgba(0,0,0,0)",
+            "link": "",
+            "link_appearance": "link",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "",
+            "text": "",
+            "title": ""
+          },
+          "type": "column"
+        },
+        "col-4": {
+          "settings": {
+            "button_background": "#ffffff",
+            "button_foreground": "#000000",
+            "button_label": "Discover",
+            "color_subtitle": "#000000",
+            "color_text": "#000000",
+            "color_title": "#000000",
+            "content_position": "center",
+            "cover_background": "rgba(0,0,0,0)",
+            "link": "",
+            "link_appearance": "link",
+            "media_enabled": true,
+            "media_spaced": false,
+            "sub_title": "",
+            "text": "",
+            "title": ""
+          },
+          "type": "column"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "action_btn_width": "extend",
+        "animation_on_reveal": true,
+        "button_label": "",
+        "button_link": "",
+        "column_alignment": "left",
+        "column_direction": "cover",
+        "columns": 4,
+        "content_animation": false,
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "image_width": "w-full",
+        "sub_title": "Follow us @YourStore",
+        "swipe_on_mobile": true,
+        "title": "Moments made memories"
+      },
+      "type": "multicolumn"
+    },
+    "ideas_slider": {
+      "block_order": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "blocks": {
+        "1": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/Pocket-tshirts_7.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "10": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/pan9.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "2": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/track_pant3.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "3": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/r8.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "4": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/Mid-rise.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "5": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/r9.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "6": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/Track_Pant.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "7": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/panda_46b87518-bea0-4476-a5f2-6b720a8a18ff.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "8": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/Work_17.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        },
+        "9": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/image_-_2025-01-04T135440.496_84536e2c-bc99-4472-8766-d5e6abf07cf3.png",
+            "link": "#/",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        }
+      },
+      "settings": {
+        "autoplay": true,
+        "color_bg": "#242833",
+        "delay": "1",
+        "heading": "",
+        "loop": true,
+        "max_width": "",
+        "navigation": false,
+        "overlap_section_above": true,
+        "pagination": false,
+        "slide_height": "small",
+        "slider_content_animation": true,
+        "slider_preload_first": false,
+        "slides_per_view": "8",
+        "transition_effect": "slide",
+        "visibility": "always"
+      },
+      "type": "slideshow"
+    },
+    "image_slider": {
+      "block_order": [
+        "image_q4VMJ7"
+      ],
+      "blocks": {
+        "image_q4VMJ7": {
+          "settings": {
+            "button_link": "",
+            "button_title": "",
+            "content_title": "",
+            "description": "",
+            "image": "shopify://shop_images/Flux_Dev_models_of_all_races_with_long_hair__blondes_brunettes_3.jpg",
+            "link": "shopify://collections/all",
+            "slideshow_content_background": "#c0c0c0",
+            "slideshow_content_background_opacity": 90,
+            "slideshow_content_button_background": "#000000",
+            "slideshow_content_button_foreground": "#ffffff",
+            "slideshow_content_foreground": "#2e2e2e",
+            "slideshow_content_position": "right"
+          },
+          "type": "image"
+        }
+      },
+      "settings": {
+        "autoplay": true,
+        "color_bg": "#ffffff",
+        "delay": "10",
+        "heading": "",
+        "loop": true,
+        "max_width": "",
+        "navigation": false,
+        "overlap_section_above": false,
+        "pagination": true,
+        "slide_height": "adapt_image",
+        "slider_content_animation": true,
+        "slider_preload_first": true,
+        "slides_per_view": "1",
+        "transition_effect": "fade",
+        "visibility": "always"
+      },
+      "type": "slideshow"
+    },
+    "newsletter": {
+      "block_order": [
+        "title",
+        "form"
+      ],
+      "blocks": {
+        "form": {
+          "settings": {
+            "button_style_secondary": false,
+            "minimal_form": true
+          },
+          "type": "email_form"
+        },
+        "title": {
+          "settings": {
+            "heading": "Sign up for our newsletter",
+            "subtext": "<p>Subscribe to our newsletter for exclusive updates, special offers, and the latest trends delivered straight to your inbox. Don’t miss out on exciting opportunities and insider news—join our community today!<br/><br/></p>"
+          },
+          "type": "heading"
+        }
+      },
+      "settings": {
+        "animation_on_reveal": false,
+        "color_scheme": "accent-1",
+        "email_position": "left",
+        "full_width": true,
+        "image_height": "large",
+        "image_position": "image_first",
+        "newsletter_image": "shopify://shop_images/20250111144740-1efd02b0-1ca4-6f0c-b93f-c25a578db0aa_ab0ad0d6-2bda-4bf8-bac1-7513cffe332d.png"
+      },
+      "type": "newsletter"
+    },
+    "recent_posts": {
+      "settings": {
+        "animation_on_reveal": true,
+        "blog": "noticias",
+        "excerpt_limit": 0,
+        "heading": "Recent stories",
+        "post_limit": 3,
+        "show_comments": false,
+        "show_date": true,
+        "show_image": true,
+        "show_link": true,
+        "tags_limit": 3
+      },
+      "type": "featured-blog"
+    },
+    "rich_text_aDMmcd": {
+      "block_order": [
+        "heading_QBhnxt",
+        "text_ByMRqH",
+        "button_pmfV6F"
+      ],
+      "blocks": {
+        "button_pmfV6F": {
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "cover_color": "#000000",
+            "text_color": "#ffffff"
+          },
+          "type": "button"
+        },
+        "heading_QBhnxt": {
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "medium"
+          },
+          "type": "heading"
+        },
+        "text_ByMRqH": {
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          },
+          "type": "text"
+        }
+      },
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "color_scheme": "background-2"
+      },
+      "type": "rich-text"
+    },
+    "rich_text_y6LRVd": {
+      "block_order": [
+        "heading_ydH8k6",
+        "text_n6D3mk",
+        "button_BF8CTt"
+      ],
+      "blocks": {
+        "button_BF8CTt": {
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "cover_color": "#000000",
+            "text_color": "#ffffff"
+          },
+          "type": "button"
+        },
+        "heading_ydH8k6": {
+          "settings": {
+            "heading": "<strong>Exceptional service, personalized support, exclusive value, proven reliability.</strong>",
+            "heading_size": "small"
+          },
+          "type": "heading"
+        },
+        "text_n6D3mk": {
+          "settings": {
+            "text": "<h6>At FATTIMIEI, our unique designs are the key to creating a fresh, casual style that will make you stand out on any occasion! From outfits for your most casual moments to elegant pieces for special occasions, our creativity knows no bounds.</h6><h6>Discover fashion that makes you feel unique and special in every moment. FATTIMIEI, where every occasion is dressed with distinction!</h6>"
+          },
+          "type": "text"
+        }
+      },
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "color_scheme": "background-1"
+      },
+      "type": "rich-text"
+    },
+    "scrolling_text": {
+      "block_order": [
+        "text"
+      ],
+      "blocks": {
+        "text": {
+          "settings": {
+            "scrolling_text": "New Drops Weekly ✦ Bold Looks for Everyday Wear ✦ Unisex Styles You’ll Live In ✦ Designed for Comfort, Made to Stand Out ✦"
+          },
+          "type": "content"
+        }
+      },
+      "settings": {
+        "cover_background_color": "",
+        "cover_background_gradient": "",
+        "icon_separator": "space",
+        "text_animation_duration": 37,
+        "text_color": "#ffffff",
+        "text_color_gradient": "",
+        "text_font_family": "work_sans_n4",
+        "text_font_size": 36,
+        "use_box_shadow": false
+      },
+      "type": "scrolling_text"
+    },
+    "testimonials_n4JJtc": {
+      "block_order": [
+        "heading_kMmGzJ"
+      ],
+      "blocks": {
+        "heading_kMmGzJ": {
+          "settings": {
+            "heading": "Customer Reviews",
+            "level": "h2",
+            "sub_title": "Hear from our happy customers"
+          },
+          "type": "heading"
+        }
+      },
+      "disabled": true,
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "animation_on_reveal": true,
+        "appearance": "slider",
+        "color_scheme": "background-1-darker",
+        "enable_theme_appearance": true,
+        "fallback_data": "",
+        "page": "quienes-somos",
+        "per_page": 3,
+        "show_all": false,
+        "show_date": false,
+        "show_photo": true,
+        "show_rating": true
+      },
+      "type": "testimonials"
+    },
+    "video-banner": {
+      "disabled": true,
+      "settings": {
+        "autoplay": true,
+        "description": "",
+        "enable_video_looping": true,
+        "full_width": true,
+        "heading": "<b>Video heading</b>",
+        "padding_bottom": 20,
+        "padding_top": 20,
+        "subtitle": "Give customers details about the video",
+        "text_color": "#ffffff",
+        "video": "",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "visibility": "always"
+      },
+      "type": "video"
+    }
+  }
+}

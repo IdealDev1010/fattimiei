@@ -1,0 +1,25 @@
+{% comment -%}
+    Render icon for newsletter section using block object.
+
+    Accepts:
+     - block  {Object}
+{% endcomment -%}
+{% liquid
+    assign iconWidth = block.settings.icon_picker.width
+    assign inlineStyle = 'width: Wpx' | replace: 'W', iconWidth
+    assign iconWidth_2x = iconWidth | times: 2
+    assign iconSizes = iconWidth | append: 'px'
+    assign iconWidths = iconWidth | append: ', ' | append: iconWidth_2x
+%}
+
+<div id="media-{{ block.id }}" class="newsletter__icon" {{ block.shopify_attributes }}>
+    {%- if block.settings.icon_picker != blank %}
+        {{
+            block.settings.icon_picker
+            | image_url: width: iconWidth
+            | image_tag: loading: 'lazy', sizes: iconSizes, widths: iconWidths, style: inlineStyle
+        }}
+    {% else %}
+        {% render 'theme-icons', name: block.settings.icon %}
+    {% endif -%}
+</div>

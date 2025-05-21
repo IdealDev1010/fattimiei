@@ -1,0 +1,252 @@
+{{ 'section-countdown-timer.css' | asset_url | stylesheet_tag }}
+{% assign section_id = section.id | prepend: '#shopify-section-' %}
+{% style %}
+    {{ section_id }} .countdown-timer {
+      background: {{ section.settings.section_bg_gradient | default: section.settings.section_bg_color }};
+      padding: {{ section.settings.vertical_paddings | append: 'rem' }} 0;
+    }
+
+    .countdown-timer > .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    {{ section_id }} .countdown-timer .title,
+    {{ section_id }} .countdown-timer span {
+      color: {{ section.settings.color_foreground }};
+    }
+
+    {{ section_id }} .countdown-timer .timer div:not(:last-child) {
+      border-right: 1px solid {{ section.settings.color_foreground }};
+    }
+
+    @media (min-width: 990px) {
+      .countdown-timer > .wrapper {
+        flex-direction: row;
+      }
+    }
+{% endstyle %}
+
+{%- liquid
+    assign timer = section.blocks | where: 'type', 'timer' | first
+    assign dayStart = timer.settings.day_starts
+    assign hoursStart = timer.settings.hours_start
+-%}
+
+{% render 'countdown', day_starts: dayStart, hours_starts: hoursStart %}
+
+{% schema %}
+{
+  "name": "t:sections.countdown-timer.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Flash Sale",
+      "label": "t:sections.countdown-timer.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.countdown-timer.settings.heading_size.options.h1"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.countdown-timer.settings.heading_size.options.h2"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.countdown-timer.settings.heading_size.options.h3"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.countdown-timer.settings.heading_size.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub_title",
+      "label": "t:sections.countdown-timer.settings.sub_title.label",
+      "default": "Get 20% off if you spend $100 or more"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.countdown-timer.settings.header.content"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "t:sections.countdown-timer.settings.section_bg_color.label",
+      "info": "t:sections.countdown-timer.settings.section_bg_color.info"
+    },
+    {
+      "type": "color_background",
+      "id": "section_bg_gradient",
+      "label": "t:sections.countdown-timer.settings.section_bg_color.label",
+      "default": "linear-gradient(to right, #bacff5, #98acd3, #778bb2, #586b92, #394c73, #3c446e, #3f3c68, #433361, #673c6b, #894670, #a85371, #c3636f)"
+    },
+    {
+      "type": "color",
+      "id": "color_foreground",
+      "label": "t:sections.countdown-timer.settings.color_foreground.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "vertical_paddings",
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "default": 3,
+      "unit": "rem",
+      "label": "t:sections.countdown-timer.settings.vertical_paddings.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "animation_on_reveal",
+      "label": "t:sections.all.settings.animation_on_reveal.label",
+      "default": true
+    }
+  ],
+  "max_blocks": 1,
+  "blocks": [
+    {
+  "type": "timer",
+  "name": "t:sections.countdown-timer.blocks.timer.name",
+  "settings": [
+    {
+      "type": "range",
+      "id": "day_starts",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 22,
+      "unit": "t:sections.countdown-timer.blocks.timer.settings.day_starts.unit",
+      "label": "t:sections.countdown-timer.blocks.timer.settings.day_starts.label",
+      "info": "t:sections.countdown-timer.blocks.timer.settings.day_starts.info"
+    },
+    {
+      "type": "select",
+      "id": "hours_start",
+      "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.label",
+      "options": [
+        {
+          "value": "0",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.0"
+        },
+        {
+          "value": "1",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.1"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.2"
+        },
+        {
+          "value": "3",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.3"
+        },
+        {
+          "value": "4",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.4"
+        },
+        {
+          "value": "5",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.5"
+        },
+        {
+          "value": "6",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.6"
+        },
+        {
+          "value": "7",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.7"
+        },
+        {
+          "value": "8",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.8"
+        },
+        {
+          "value": "9",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.9"
+        },
+        {
+          "value": "10",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.10"
+        },
+        {
+          "value": "11",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.11"
+        },
+        {
+          "value": "12",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.12"
+        },
+        {
+          "value": "13",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.13"
+        },
+        {
+          "value": "14",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.14"
+        },
+        {
+          "value": "15",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.15"
+        },
+        {
+          "value": "16",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.16"
+        },
+        {
+          "value": "17",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.17"
+        },
+        {
+          "value": "18",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.18"
+        },
+        {
+          "value": "19",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.19"
+        },
+        {
+          "value": "20",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.20"
+        },
+        {
+          "value": "21",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.21"
+        },
+        {
+          "value": "22",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.22"
+        },
+        {
+          "value": "23",
+          "label": "t:sections.countdown-timer.blocks.timer.settings.hours_start.options.23"
+        }
+      ],
+      "default": "10"
+    }
+  ]
+}
+  ],
+  "presets": [
+    {
+      "name": "t:sections.countdown-timer.presets.name",
+      "blocks": [
+        {
+          "type": "timer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

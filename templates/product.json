@@ -1,0 +1,325 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "border_top": false,
+        "border_bottom": false,
+        "use_background_transparent": false
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_before": "{{ product.vendor }}",
+            "text_after": "",
+            "show_rating_judgeme": true,
+            "show_sku": true,
+            "show_price": true
+          }
+        },
+        "stock_status": {
+          "type": "stock_status",
+          "settings": {
+            "show_stock_status": true,
+            "stock_left_threshold": 9
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "settings": {
+            "show_navigation": false,
+            "transition_effect": "fade_in",
+            "gallery_thumbs_mode": "grid_theme",
+            "thumbnail_size": 320,
+            "is_thumbnail_mobile_bullet": true,
+            "show_badges": true,
+            "badge_size": "md",
+            "use_gallery_placeholder": false,
+            "placeholder_name": "product-1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_message": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_collapsed": false,
+            "initial_lines": 3
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "mark_unavailable_variants": true,
+            "show_swatch_colors": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "gift_card_show_recipient_form": true
+          }
+        },
+        "pickup": {
+          "type": "pickup",
+          "settings": {}
+        },
+        "collapsible_customer_service": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Customer Service",
+            "content": "<p>Our dedicated customer service team is here to assist you with any questions or concerns. Whether you need help with your order, returns, or product information, we're just a call or email away. Contact us for prompt and friendly support!</p>",
+            "page": "contact",
+            "icon": "chat_bubble"
+          }
+        },
+        "collapsible_return_policy": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return Policy",
+            "content": "<p>We offer a stress-free return policy with a generous 30-day return window. Enjoy free returns on orders over $50, giving you peace of mind with every purchase. Whether you're trying new styles or deciding on a fit, we prioritize your satisfaction, making sure your shopping experience is as flexible and easy as possible.</p>",
+            "page": "",
+            "icon": "return"
+          }
+        },
+        "recommendations_cQPtMh": {
+          "type": "recommendations",
+          "settings": {
+            "heading": "Pair well with",
+            "heading_icon": "star",
+            "intent": "related",
+            "products_to_show": 6,
+            "is_collapsible_tab": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_facebook": true,
+            "show_twitter": true,
+            "show_pinterest": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "stock_status",
+        "gallery",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pickup",
+        "collapsible_customer_service",
+        "collapsible_return_policy",
+        "recommendations_cQPtMh",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_quick_add": false,
+        "animation_on_reveal": true,
+        "product_info_position": false
+      }
+    },
+    "product-tabs": {
+      "type": "product-tabs",
+      "blocks": {
+        "description": {
+          "type": "description",
+          "settings": {
+            "heading": "Description"
+          }
+        },
+        "reviews": {
+          "type": "reviews",
+          "settings": {
+            "heading": "Reviews",
+            "enable_theme_appearance": true
+          }
+        },
+        "faq": {
+          "type": "faq",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "default_faqs": "What level of performance can I expect from 4K Color Drive?:This tv comes equipped with a 4k color drive, which allows the tv to accurately reproduce a wider spectrum of colors. you’ll experience an exceptionally vibrant, pristine image that makes each scene more lifelike.",
+            "link_to_faq_page": "shopify://pages/faqs"
+          }
+        },
+        "similar": {
+          "type": "similar",
+          "settings": {
+            "heading": "Similar Products",
+            "source": [
+              "abstract-art-design-womens-all-over-print-mid-rise-bike-shorts",
+              "abstract-art-design-womens-satin-pajama-shorts",
+              "abstract-neon-tropical-pattern-with-vibrant-pops-of-color-womens-all-over-print-ruffle-shorts"
+            ],
+            "is_random": true,
+            "products_per_page": 4,
+            "badge_size": "sm",
+            "image_ratio": "settings|product_card_image_ratio",
+            "show_to_cart_button": true
+          }
+        }
+      },
+      "block_order": [
+        "description",
+        "reviews",
+        "faq",
+        "similar"
+      ],
+      "settings": {
+        "tabs_layout": "collapsed",
+        "collapsed_tabs_color": "#000000",
+        "collapsed_tabs_bg": "",
+        "collapsed_tabs_bg_gradient": "linear-gradient(270deg, rgba(160, 232, 254, 1), rgba(252, 224, 252, 1) 100%)",
+        "section_tabs_bg": "#F6F5F4",
+        "section_tabs_bg_gradient": "",
+        "animation_on_reveal": true
+      }
+    },
+    "products-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 8,
+        "products_per_row": 4,
+        "products_background_color": "#ffffff",
+        "products_appearance": "slider",
+        "show_slider_buttons": true,
+        "animation_on_reveal": true,
+        "badge_size": "md",
+        "image_ratio": "settings|product_card_image_ratio",
+        "show_to_cart_button": true
+      }
+    },
+    "products-complementary": {
+      "type": "product-complementary",
+      "settings": {
+        "title": "Complementary products",
+        "heading_size": "h2",
+        "products_to_show": 8,
+        "products_per_row": 4,
+        "products_background_color": "#ffffff",
+        "products_appearance": "slider",
+        "show_slider_buttons": true,
+        "animation_on_reveal": true,
+        "badge_size": "md",
+        "image_ratio": "settings|product_card_image_ratio",
+        "show_to_cart_button": true
+      }
+    },
+    "border_separator_1": {
+      "type": "border-separator",
+      "settings": {
+        "border_height": 1,
+        "border_color": ""
+      }
+    },
+    "recent_posts": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Recent stories",
+        "blog": "news",
+        "post_limit": 3,
+        "animation_on_reveal": true,
+        "show_image": true,
+        "tags_limit": 3,
+        "excerpt_limit": 0,
+        "show_date": true,
+        "show_link": false,
+        "show_comments": false
+      }
+    },
+    "border_separator_2": {
+      "type": "border-separator",
+      "settings": {
+        "border_height": 1,
+        "border_color": ""
+      }
+    },
+    "icons_bar": {
+      "type": "icons-bar",
+      "blocks": {
+        "icon-bar-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-shipping",
+            "text": "<p><strong>Free Delivery</strong></p>",
+            "text_underneath_icon": "<p>Delivery is free above 100$ on every order</p>"
+          }
+        },
+        "icon-bar-2": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-returns",
+            "text": "<p><strong>30 days for returns</strong></p>",
+            "text_underneath_icon": "<p>Returns is free above a certain threshold. Discover more in our<a href=\"/pages/faqs\" title=\"FAQs\"> FAQ</a></p>"
+          }
+        },
+        "icon-bar-3": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-lock",
+            "text": "<p><strong>Secure Payment</strong></p>",
+            "text_underneath_icon": "<p>Take advantage of a secure payments. Discover more in our <a href=\"/pages/faqs\" title=\"FAQs\">FAQ</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-bar-1",
+        "icon-bar-2",
+        "icon-bar-3"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "visibility": "all",
+        "icons_width": 25,
+        "text_position": "theme_appearance",
+        "border_top": false,
+        "border_bottom": false,
+        "shadow": false,
+        "separator": false,
+        "animation_on_reveal": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "product-tabs",
+    "products-recommendations",
+    "products-complementary",
+    "border_separator_1",
+    "recent_posts",
+    "border_separator_2",
+    "icons_bar"
+  ]
+}

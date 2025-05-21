@@ -1,0 +1,35 @@
+scroll-top {
+    position: fixed;
+    z-index: 19;
+    cursor: pointer;
+    bottom: 21vh;
+    right: 1rem;   
+    transform: rotate(-90deg);
+    padding: .5rem;
+}
+
+scroll-top:hover,
+scroll-top:focus {
+    box-shadow: 3px 3px 0px rgba(0,0,0,.1);
+    transition: box-shadow .5s;
+    border: 1px solid var(--color-foreground-8);
+    border-radius: 4px;
+}
+
+scroll-top svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    animation: _pulse 2.5s ease-out infinite normal;
+}
+
+@media (min-width: 990px) {
+    scroll-top {      
+        bottom: 32vh;
+    }
+}
+
+@media (min-width: 1400px) {
+    scroll-top {      
+        bottom: 30vh;
+    }
+}

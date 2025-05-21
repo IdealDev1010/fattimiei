@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header_top": {
+      "type": "header-top",
+      "settings": {
+        "full_width": false,
+        "custom_layout_width": 1440,
+        "color_text": "#ffffff",
+        "color_background": "#242833",
+        "show_social_icons": true,
+        "show_email": true,
+        "show_phone": true,
+        "message": "<p><strong>Free shipping</strong> for all new summer outfits | <a href=\"/collections/all\" title=\"All collections\"><strong>See selection</strong></a></p>",
+        "add_border_bottom": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "full_width": true,
+        "custom_layout_width": 1440,
+        "logo": "shopify://shop_images/Sports_And_Surf_0b97ca60-ce06-499c-9168-c2aa7c88752c.png",
+        "logo_width": 160,
+        "enable_sticky_header": false,
+        "add_border_searchfield": false,
+        "menu": "main-menu",
+        "use_slideout_menu": false,
+        "second_level_menu_width": "full-width",
+        "megamenu_items": "",
+        "smallmenu_items": "",
+        "activate_top_level_menu": "on_hover",
+        "show_collection_image": false,
+        "collection_icon_width": 30,
+        "enable_top_menu_animation": true,
+        "enable_child_menu_animation": true,
+        "main_items_per_row": 4,
+        "second_dropdown_limit_qty_categories_link": "Shop All",
+        "second_dropdown_limit_qty_categories": 5
+      }
+    }
+  },
+  "order": [
+    "header_top",
+    "header"
+  ]
+}

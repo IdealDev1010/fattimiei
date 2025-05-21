@@ -1,0 +1,29 @@
+{% comment %}
+    Render Link "View All" as a block in the header dropdown content.
+
+    Accepts:
+      - block:              {Object}
+      - blockOrder:         {Numb}
+      - parent_item_index:  {Numb}
+{% endcomment %}
+
+{% liquid
+    assign selectedParentIndex = block.settings.item_menu_index
+    assign url = block.settings.page_url
+%}
+
+{% if parent_item_index == selectedParentIndex %}
+    <div
+        class="dropdown-inner__button link-wrapper{% if settings.animation_on_reveal_assets %} reveal-slide-in{% endif %}"
+        data-block-index="{{ blockOrder }}"
+    >
+        <a
+            class="link view-all animate-arrow"
+            href="{{ url | default: '#/' }}"
+            aria-label="{{ 'sections.collection_list.view_all' | t }}"
+        >
+            <span class="view-all-title">{{ 'sections.collection_list.view_all' | t }}</span>
+            {% comment %}{% render 'icons-solid', name: 'long-arrow-right', css_class: 'icon icon-arrow' %}{% endcomment %}
+        </a>
+    </div>
+{% endif %}

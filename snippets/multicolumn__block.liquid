@@ -1,0 +1,96 @@
+{%- comment -%}
+    Render multicolumn column (block).
+
+    Accepts:
+      - block:          {Object}
+      - image_ratio:    {Number}
+{%- endcomment -%}
+
+{% liquid
+    case section.blocks.size
+        when 1
+            assign image_sizes = 'calc(min(1200px, 100vw) - .75rem * 2)'
+        when 2
+            assign image_sizes = '(max-width: 767px) calc(100vw - .75rem * 2), calc(min(1200px, 100vw) / 2 - .75rem * 2)'
+        else
+            assign image_sizes = '(max-width: 767px) calc(100vw - .75rem * 2), (max-width: 989px) calc(100vw / 2 - .75rem * 2), calc(min(1200px, 100vw) / 3 - .75rem * 2)'
+    endcase
+%}
+{% capture inner_html %}
+    {% if block.settings.media_enabled %}
+      <div class="multicolumn-card__image-wrapper">
+        <div class="media media--transparent">
+        {%- if block.settings.image != blank -%}
+          {% render 'render-image',
+              image: block.settings.image
+              widths: '698,966,1176,#iw#'
+              sizes: image_sizes
+          %}
+        {%- else -%}
+          {{ 'collection-5' | placeholder_svg_tag: 'placeholder' }}
+        {%- endif -%}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="multicolumn-card__content multicolumn-card__content-{{ section.settings.column_alignment }}"
+      style="color: {{ block.settings.color_text }}"
+    >
+      {% unless block.settings.title == blank %}
+      <h3 class="title" style="color: {{ block.settings.color_title }}">
+        {{- block.settings.title -}}
+      </h3>        
+      {% endunless %}
+      {% unless block.settings.sub_title == blank %}
+      <p class="sub_title h6" style="color: {{ block.settings.color_subtitle }}">
+        {{- block.settings.sub_title -}}
+      </p>        
+      {% endunless %}
+      {% unless block.settings.text == blank %}
+      <div class="rte text">
+        {{- block.settings.text -}}
+      </div>        
+      {% endunless %}
+      {% unless block.settings.link_appearance == 'link' %}
+        <a
+          class="multicolumn-card__action button button--primary animate-arrow view-all"
+          href="{{ block.settings.link }}"
+          title="{{ block.settings.link.title }}"
+          style="background: {{ block.settings.button_background }};color: {{ block.settings.button_foreground }}"
+        >
+          {{ block.settings.button_label | escape }}
+          {% render 'icons-solid', name: 'long-arrow-right', css_class: 'icon-arrow extend' %}
+        </a>
+      {% endunless %}
+    </div>
+
+{% endcapture %}
+{%- liquid
+    assign liClass = 'multicolumn-list__item grid__item reveal-item'
+    if section.settings.swipe_on_mobile
+        assign liClass = liClass | append: ' slider__slide'
+    endif
+
+    if section.settings.content_animation
+        assign liClass = liClass | append: ' with-reveal-animation'
+    endif
+-%}
+<li
+    id="col-{{ block.id }}--{{ section.id }}"
+    class="{{ liClass }}"
+    {{ block.shopify_attributes }}
+>
+    {%- if block.settings.link != blank and block.settings.link_appearance == 'link' -%}
+        <a
+            class="multicolumn-card link--appearance{% if block.settings.media_spaced %} multicolumn-card--spaced{% endif %}"
+            href="{{ block.settings.link | default: '#/'}}"
+            title="{{ block.settings.link.title }}"
+        >
+            {{ inner_html }}
+        </a>
+    {%- else -%}
+        <div class="multicolumn-card{% if block.settings.media_spaced %} multicolumn-card--spaced{% endif %}">
+            {{ inner_html }}
+        </div>
+    {%- endif -%}
+</li>

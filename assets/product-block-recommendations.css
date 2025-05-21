@@ -1,0 +1,88 @@
+.product__info-block--recommendations:has(.no-recommendations),
+.product__info-block--recommendations:has(.no-recommendations, .grid-item) .loader-when-empty {
+  display: none;
+}
+
+.product__info-block--recommendations > h2 {
+  margin-top: 0;
+}
+
+.product__info-block--recommendations > h2 svg {
+  display: inline;
+}
+
+.product__info-block--recommendations > h2 span {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: calc(100% - 10rem);
+  overflow-wrap: break-word;
+}
+
+.product__info-block--recommendations product-recommendations {
+  display: block;
+}
+
+.product__info-block--recommendations slider-component .grid-item :is(quick-view, .grid-item__swatch-wrapper) {
+  display: none;
+}
+
+.product__info-block--recommendations .grid-item .item-title {
+  -webkit-line-clamp: initial;
+}
+
+.product__info-block--recommendations ul.slider .grid-item {
+  width: calc(33% + 6px) !important;
+  padding: 0 !important;
+}
+
+.product__info-block--recommendations:not(.product__info-block--collapsible_tab) ul {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.product__info-block--recommendations [data-mode="grid"] .label.visually-hidden + .price--final {
+  font-size: 1rem;
+}
+
+.product__info-block--recommendations [data-mode="grid"] .item-actions-wrapper {
+  position: relative;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+
+.product__info-block--recommendations [data-mode="grid"] .item-actions-wrapper :is(button, .button) {
+  border-radius: var(--button__border-radius);
+}
+
+.product__info-block--recommendations [data-mode="grid"] .item-actions-wrapper .button--primary:is(button, .button) {
+  --color-button-background: var(--color-base-accent-1);
+  --color-button-border: var(--color-base-accent-1);
+  --color-button-text: var(--color-base-accent-1-inverse);
+  --color-button-text-rgb: var(--color-base-accent-1-inverse-rgb);
+  justify-content: center;
+  padding: .25rem .75rem;
+  width: 100%;
+  margin-top: .25rem;
+}
+
+.product__info-block--recommendations .slider-buttons .slider__button {
+  padding: .5rem;
+}
+
+.product__info-block--recommendations.accordion .slider-buttons {
+  top: auto !important;
+  bottom: 0 !important;
+}
+
+.product__info-block--recommendations [data-mode="grid"] .item-actions-wrapper button .loading-overlay {
+  border-radius: 0;
+}
+
+@media (hover: hover) {
+  .product__info-block--recommendations [data-mode="grid"] squama-item:after {
+    content: none;
+  }
+}

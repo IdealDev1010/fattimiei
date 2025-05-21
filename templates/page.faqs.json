@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "border_top": false,
+        "border_bottom": false,
+        "use_background_transparent": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "layout_max_width": 1200,
+        "animation_on_reveal": true
+      }
+    },
+    "page-title": {
+      "type": "page-title",
+      "blocks": {
+        "title": {
+          "type": "heading",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "subtitle": "Our store is designed to be user-friendly and easy to navigate, so customers can find what they're looking for quickly and easily"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "subtitle"
+      ],
+      "settings": {}
+    },
+    "faqs": {
+      "type": "faqs-page",
+      "blocks": {
+        "block-1": {
+          "type": "faq_accordion",
+          "settings": {
+            "heading": "General Question",
+            "custom_liquid": "{{ page.metafields.custom.faqs.value }}"
+          }
+        },
+        "block-2": {
+          "type": "faq_accordion",
+          "settings": {
+            "heading": "",
+            "custom_liquid": "{{ page.metafields.custom.faqs_1.value }}"
+          }
+        },
+        "block-3": {
+          "type": "faq_accordion",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "custom_liquid": "{{ page.metafields.custom.faqs_2.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "show_search_field": false,
+        "cover_background": "#f5f5f5",
+        "cover_background_gradient": "",
+        "animation_on_reveal": true
+      }
+    },
+    "border_separator_1": {
+      "type": "border-separator",
+      "settings": {
+        "border_height": 1,
+        "border_color": ""
+      }
+    },
+    "icons_bar": {
+      "type": "icons-bar",
+      "blocks": {
+        "icon-bar-1": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-shipping",
+            "text": "<h6>Item Title</h6>",
+            "text_underneath_icon": "<p>Describe the item, make announcements or welcome customers to your store.</p>"
+          }
+        },
+        "icon-bar-2": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-returns",
+            "text": "<h6>Item Title</h6>",
+            "text_underneath_icon": "<p>Describe the item, make announcements or welcome customers to your store.</p>"
+          }
+        },
+        "icon-bar-3": {
+          "type": "icon",
+          "settings": {
+            "icon": "divine-lock",
+            "text": "<h6>Item Title</h6>",
+            "text_underneath_icon": "<p>Describe the item, make announcements or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon-bar-1",
+        "icon-bar-2",
+        "icon-bar-3"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "visibility": "all",
+        "icons_width": 25,
+        "text_position": "theme_appearance",
+        "border_top": false,
+        "border_bottom": false,
+        "shadow": false,
+        "separator": false,
+        "animation_on_reveal": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "page-title",
+    "faqs",
+    "border_separator_1",
+    "icons_bar"
+  ]
+}

@@ -1,0 +1,17 @@
+{% comment %}
+    Render Link "View All" in the header dropdown content: Product List / Collection list
+
+    Accepts:
+     - link_view_all: {String}
+{% endcomment %}
+
+<div class="link-wrapper">
+    <a
+        class="link view-all animate-arrow"
+        href="{{ link_view_all | default: '#/' }}"
+        aria-label="{{ 'sections.collection_list.view_all' | t }}"
+    >
+        <span class="view-all-title">{{ 'sections.collection_list.view_all' | t }}</span>
+        {% render 'icons-solid', name: 'long-arrow-right', css_class: 'icon icon-arrow' %}
+    </a>
+</div>

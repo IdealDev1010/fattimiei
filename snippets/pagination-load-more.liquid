@@ -1,0 +1,54 @@
+{% comment %}
+    Render Infinity Scroll action
+
+    Accepts:
+    - pagination:   {Object}
+    - type:         {String}
+    - class:        {String}
+{% endcomment %}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{% style %}
+    pagination-load-more .loading-overlay {
+        position: fixed;
+    }
+    pagination-load-more .button--extend {
+        padding: .75rem 2.75rem;
+    }
+    pagination-load-more .loading-overlay__spinner {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-foreground);
+    }{% if type == 'load_more_button' %}
+    pagination-load-more {
+        display: flex;
+        justify-content: center;
+        margin: 2.5rem auto;
+    }
+    .pagination-load-more {
+        font-weight: 400;
+    }{% endif %}
+
+    pagination-load-more[data-page-next="false"] {
+        visibility: hidden;
+    }
+{% endstyle %}
+<pagination-load-more
+    data-pagination-type="{{ type }}"
+    data-page-next="{% if paginate.next %}true{% else %}false{% endif %}"
+>
+    <a
+        class="pagination-load-more{% if type == 'load_more_button' %} button button--primary{% endif %} button--extend"
+        href="{{ paginate.next.url}}"
+    >
+        <span
+            {% unless type == 'load_more_button' %}
+                class="sr-only"
+            {% endunless %}
+        >
+            {{ 'general.pagination.infinity_scroll' | t }}
+        </span>
+    </a>
+</pagination-load-more>
+
+{% render 'initialize-deferred-scripts', init_infinity_pagination: true %}
