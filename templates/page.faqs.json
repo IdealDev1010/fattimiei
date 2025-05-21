@@ -78,6 +78,7 @@
         "block-2",
         "block-3"
       ],
+      "disabled": true,
       "settings": {
         "show_search_field": false,
         "cover_background": "#f5f5f5",
@@ -85,8 +86,110 @@
         "animation_on_reveal": true
       }
     },
+    "collapsible_content_EETLwR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_3pgVLW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Dónde se encuentra ubicada FATTIMIEI?",
+            "icon": "question_mark",
+            "row_content": "<p>Nuestra sede está ubicada en [Calle Río Tajo, 4, 29660 Marbella, Málaga, Spain]. Sin embargo, ofrecemos envíos a nivel nacional e internacional. Para obtener información sobre envíos a tu área específica, no dudes en contactarnos.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_k8fkmh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo puedo realizar un pedido en línea?",
+            "icon": "question_mark",
+            "row_content": "<p>Para realizar un pedido, simplemente navega por nuestra tienda en línea, selecciona los productos que te interesan, agrégales a tu carrito y sigue el proceso de pago. Si necesitas asistencia durante el proceso, nuestro equipo de atención al cliente está disponible para ayudarte.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ae3d4r": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Qué métodos de pago aceptan?",
+            "icon": "question_mark",
+            "row_content": "<p>Aceptamos diversos métodos de pago, incluyendo tarjetas de crédito y débito (Visa, MasterCard, American Express), PayPal y otros métodos de pago seguros. Puedes elegir el método que más te convenga al momento de realizar tu compra.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GVzJG8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cuál es el tiempo de procesamiento y envío de los pedidos?",
+            "icon": "question_mark",
+            "row_content": "<p>El tiempo de procesamiento de los pedidos puede variar entre 1 y 3 días hábiles. Los tiempos de envío dependen de tu ubicación y del método de envío seleccionado. Recibirás un número de seguimiento para rastrear tu pedido una vez que haya sido enviado.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BaeDJc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo puedo rastrear mi pedido?",
+            "icon": "question_mark",
+            "row_content": "<p>Después de que tu pedido haya sido enviado, recibirás un correo electrónico con un número de seguimiento. Puedes utilizar este número para rastrear el estado de tu pedido en el sitio web del transportista.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bFG4Lj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo puedo contactar al servicio de atención al cliente?",
+            "icon": "question_mark",
+            "row_content": "<p>Puedes contactarnos a través de <a href=\"mailto:support@fattimiei.com\" target=\"_blank\" title=\"mailto:support@fattimiei.com\">support@fattimiei.com</a>. También puedes utilizar el formulario de contacto en nuestro sitio web para enviarnos tus preguntas o comentarios.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6tQ88g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿FATTIMIEI ofrece servicios de personalización de productos?",
+            "icon": "question_mark",
+            "row_content": "<p>Actualmente, no ofrecemos servicios de personalización. Sin embargo, estamos en constante evolución y es posible que en el futuro ampliemos nuestras ofertas. Mantente atento a nuestras actualizaciones para conocer las novedades.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ARjDUD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "¿Cómo me mantengo informado sobre nuevas colecciones y ofertas?",
+            "icon": "question_mark",
+            "row_content": "<p>Para estar al tanto de nuestras últimas colecciones, ofertas especiales y noticias, suscríbete a nuestro boletín informativo y síguenos en nuestras redes sociales. Así no te perderás ninguna de nuestras novedades.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_3pgVLW",
+        "collapsible_row_k8fkmh",
+        "collapsible_row_ae3d4r",
+        "collapsible_row_GVzJG8",
+        "collapsible_row_BaeDJc",
+        "collapsible_row_bFG4Lj",
+        "collapsible_row_6tQ88g",
+        "collapsible_row_ARjDUD"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "border_separator_1": {
       "type": "border-separator",
+      "disabled": true,
       "settings": {
         "border_height": 1,
         "border_color": ""
@@ -143,6 +246,7 @@
     "main",
     "page-title",
     "faqs",
+    "collapsible_content_EETLwR",
     "border_separator_1",
     "icons_bar"
   ]
