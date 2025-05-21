@@ -88,7 +88,7 @@
             {%- endif -%}
 
             {%- liquid
-                assign faqs = block.settings.custom_description
+                assign faqs = block.settings.custom_liquid
                 assign first_two = faqs | slice: 0, 2
                 assign last_two = faqs | slice: -2, 2
                 assign number_of_chars_to_return = faqs | size | minus: 4
@@ -159,7 +159,7 @@
             "default": true
         }
     ],
-    "max_blocks": 10,
+    "max_blocks": 3,
     "blocks": [
         {
           "type": "faq_accordion",
@@ -172,9 +172,10 @@
                     "default": "General Question"
                 },
                 {
-                    "type": "richtext",
-                    "id": "custom_description",
-                    "label": "t:sections.faqs-page.blocks.faq_accordion.settings.custom_liquid.label"
+                    "type": "liquid",
+                    "id": "custom_liquid",
+                    "label": "t:sections.faqs-page.blocks.faq_accordion.settings.custom_liquid.label",
+                    "info": "t:sections.faqs-page.blocks.faq_accordion.settings.custom_liquid.info"
                 }
             ]
         }

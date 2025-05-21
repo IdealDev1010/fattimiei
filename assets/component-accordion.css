@@ -20,13 +20,6 @@
   align-items: center;
 }
 
-.accordion summary .icon {
-  visibility: hidden;
-  position: absolute;
-  right: 0px;
-  height: 1.25rem;
-  width: 1.25rem}
-
 .accordion [open] summary .icon-minus,
 .accordion summary .icon-plus {
   visibility: visible;
@@ -57,4 +50,34 @@
 
 .accordion__content img {
   max-width: 100%;
+}
+
+
+.accordion .svg-wrapper {
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  margin-right: 1rem;
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.svg-wrapper > svg {
+  height: 100%;
+  width: 100%;
+  display: block !important;
+}
+
+.svg-wrapper > svg path {
+  stroke: var(--color-foreground);
+}
+
+.accordion details[open] > summary .icon-caret {
+  transform: rotate(180deg);
+}
+
+summary .icon-caret {
+  position: absolute;
+  height: 0.5rem;
+  right: 1.5rem;
+  top: calc(50% - 0.2rem);
 }
